@@ -48,8 +48,13 @@ public class Table {
         this.status = status;
     }
     
-    public void reserve(){
-        
+    public void reserve(Integer number){
+        this.tableNumber = number;
         status.valueOf("RESERVED");
+    }
+    
+    public void cancelReserve(Integer number){
+        this.tableNumber = null;
+        status.valueOf("AVALIABLE");
     }
 }

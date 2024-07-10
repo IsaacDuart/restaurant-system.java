@@ -50,6 +50,12 @@ public class Restaurant {
         return employees;
     }
 
+    public void reserve(Table t){
+        getTables().add(t);
+    }
     
+    public void cancelReserve(Table t){
+        getTables().remove(t);
+    }
     
 }
